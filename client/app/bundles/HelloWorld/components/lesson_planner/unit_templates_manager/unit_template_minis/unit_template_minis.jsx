@@ -44,10 +44,10 @@
   },
 
   generateUnitTemplateView: function (model, index) {
-    return <UnitTemplateMini key={model.id}
+    return (<UnitTemplateMini key={model.id}
                                 data={model}
                                 index={index}
-                                actions={this.props.actions} />
+                                actions={this.props.actions} />)
   },
 
   generateShowAllGradesView: function () {

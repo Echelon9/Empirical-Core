@@ -24,7 +24,7 @@ export default function (component, update, options) {
         default1 = null;
       }
 
-      return <TextInput key={ele.name}
+      return (<TextInput key={ele.name}
                            update={config.update}
                            name={ele.name}
                            label={ele.label}
@@ -35,7 +35,7 @@ export default function (component, update, options) {
                            default={default1}
                            type={ele.type}
                            errorKey={ele.errorKey}
-                           isSingleRow={config.isSingleRow}/>;
+                           isSingleRow={config.isSingleRow}/>);
   };
 
   this.setErrors = function (errors) {

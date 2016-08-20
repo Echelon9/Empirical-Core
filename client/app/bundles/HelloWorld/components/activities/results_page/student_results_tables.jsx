@@ -82,10 +82,10 @@ export default React.createClass({
 
     resultTypes: function() {
       if (this.props.results.story && this.props.results.sentence) {
-        return <div>
+        return (<div>
                     {this.tableBuilder(this.props.results.story, 'Passage Proofreading')}
                     {this.tableBuilder(this.props.results.sentence, 'Sentence Writing')}
-                </div>
+                </div>)
       } else if (this.props.results.story) {
         return this.tableBuilder(this.props.results.story, 'Passage Proofreading');
       } else {

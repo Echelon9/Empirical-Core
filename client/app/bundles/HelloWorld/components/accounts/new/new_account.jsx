@@ -148,18 +148,18 @@ export default React.createClass({
       view = <NewAccountStage1 selectRole={this.selectRole} />;
     } else if (this.state.stage === 2) {
       if (this.state.role === 'student') {
-        view = <NewStudent textInputGenerator={this.modules.textInputGenerator}
+        view = (<NewStudent textInputGenerator={this.modules.textInputGenerator}
                               update={this.update}
                               signUp={this.signUp}
-                              errors={this.state.errors}/>;
+                              errors={this.state.errors}/>);
       } else {
-        view = <NewTeacher textInputGenerator={this.modules.textInputGenerator}
+        view = (<NewTeacher textInputGenerator={this.modules.textInputGenerator}
                               sendNewsletter={this.state.sendNewsletter}
                               stage={this.state.teacherStage}
                               update={this.update}
                               signUp={this.signUp}
                               errors={this.state.errors}
-                              analytics={this.state.analytics}/>;
+                              analytics={this.state.analytics}/>);
       }
     }
     return <div className='container account-form' id='sign-up'>{view}</div>;

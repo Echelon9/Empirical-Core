@@ -19,12 +19,12 @@ export default React.createClass({
       return <StudentProfileActivity key={ele.id} data={ele} />
     });
     if (this.props.data.length > 0) {
-     result = <div className="fake-table">
+     result = (<div className="fake-table">
         <div className="header">{this.props.header}
           <span className="header-list-counter">{this.sayCount()}</span>
         </div>
         {activities}
-      </div>
+      </div>)
     } else {
       result = <span></span>
     }

@@ -19,9 +19,9 @@ EC.CheckBoxes = React.createClass({
 
   render: function () {
     var checkBoxes = _.map(this.props.items, this.generateCheckBox, this);
-    return <div className='vertical-checkboxes'>
+    return (<div className='vertical-checkboxes'>
               <h3>{this.props.label}</h3>
               <div>{checkBoxes}</div>
-            </div>;
+            </div>);
   }
 });

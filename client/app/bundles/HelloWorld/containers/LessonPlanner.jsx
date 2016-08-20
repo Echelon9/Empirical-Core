@@ -310,11 +310,11 @@
 	render: function () {
 		var tabSpecificComponents;
 		if (this.state.unitTemplatesManager.assignSuccess === true)  {
-			tabSpecificComponents = <UnitTemplatesAssigned
+			tabSpecificComponents = (<UnitTemplatesAssigned
 																		data={this.state.unitTemplatesManager.lastActivityAssigned}
-																		actions={this.unitTemplatesAssignedActions()}/>;
+																		actions={this.unitTemplatesAssignedActions()}/>);
 		} else if (this.state.tab == 'createUnit') {
-			tabSpecificComponents = <CreateUnit data={{createUnitData: this.state.createUnit,
+			tabSpecificComponents = (<CreateUnit data={{createUnitData: this.state.createUnit,
 																						assignSuccessData: this.state.unitTemplatesManager.model}}
 																						 actions={{toggleStage: this.toggleStage,
                                                        toggleTab: this.toggleTab,
@@ -322,13 +322,13 @@
                                                        update: this.updateCreateUnitModel,
                                                        toggleActivitySelection: this.toggleActivitySelection,
 																										 	 assignSuccessActions: 	this.unitTemplatesAssignedActions()}}
-																						 analytics={this.analytics()}/>;
+																						 analytics={this.analytics()}/>);
 		} else if (this.state.tab == 'manageUnits') {
 			tabSpecificComponents = <ManageUnits actions={{toggleTab: this.toggleTab, editUnit: this.editUnit}} />;
 		} else if (this.state.tab == 'exploreActivityPacks') {
-			tabSpecificComponents = <UnitTemplatesManager
+			tabSpecificComponents = (<UnitTemplatesManager
 																		data={this.state.unitTemplatesManager}
-																		actions={this.unitTemplatesManagerActions()}/>;
+																		actions={this.unitTemplatesManagerActions()}/>);
     } else if (this.state.tab === 'assignANewActivity') {
 			tabSpecificComponents = <AssignANewActivity toggleTab={this.toggleTab}/>;
 																}

@@ -59,22 +59,22 @@
     var classroomList;
     if (this.props.classrooms) {
       classroomList = this.props.classrooms.map(function(entry) {
-        return <Classroom classroom={entry.classroom}
+        return (<Classroom classroom={entry.classroom}
                              students={entry.students}
                              allSelected={entry.allSelected}
                              toggleClassroomSelection={this.props.toggleClassroomSelection}
-                             toggleStudentSelection={this.props.toggleStudentSelection} />;
+                             toggleStudentSelection={this.props.toggleStudentSelection} />);
       }, this);
     } else {
       classroomList = []
     }
 
     var dueDateList = this.props.selectedActivities.map(function(activity) {
-      return <ActivityDueDate activity={activity}
+      return (<ActivityDueDate activity={activity}
                                  key={activity.id}
                                  dueDate={this.dueDate()}
                                  toggleActivitySelection={this.props.toggleActivitySelection}
-                                 assignActivityDueDate={this.props.assignActivityDueDate}/>;
+                                 assignActivityDueDate={this.props.assignActivityDueDate}/>);
     }, this);
 
     return (

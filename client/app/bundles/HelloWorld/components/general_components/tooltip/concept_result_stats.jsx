@@ -28,10 +28,10 @@ export default React.createClass({
 
   render: function () {
     var rows = this.calculateStats().map(function (statsRow) {
-      return <ConceptResultStat key={statsRow.name}
+      return (<ConceptResultStat key={statsRow.name}
                                    name={statsRow.name}
                                    correct={statsRow.correct}
-                                   incorrect={statsRow.incorrect} />;
+                                   incorrect={statsRow.incorrect} />);
     });
     return (
       <div className='concept-stats container'>

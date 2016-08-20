@@ -38,11 +38,11 @@
   },
 
   generateView: function (option) {
-    return <ListFilterOption
+    return (<ListFilterOption
                     key={this.getKey(option)}
                     data={option}
                     isSelected={this.isSelected(option)}
-                    select={this.props.select} />
+                    select={this.props.select} />)
   },
 
   render: function () {

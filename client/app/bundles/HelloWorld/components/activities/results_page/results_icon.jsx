@@ -53,10 +53,10 @@ export default React.createClass({
     },
 
     render: function() {
-      return <div className='icon' style={this.backgroundColor()}>
+      return (<div className='icon' style={this.backgroundColor()}>
         <img src={this.imageSrc()} alt='activity-type'/>
         <h3 style={this.fontColor()}>{Math.round(this.props.percentage * 100) + '%'}</h3>
-      </div>
+      </div>)
     }
 
 });
