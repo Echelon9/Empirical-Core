@@ -71,7 +71,7 @@ export default React.createClass({
   render: function() {
     return (
       <ProgressReport columnDefinitions={this.columnDefinitions}
-                         pagination={true}
+                         pagination
                          sourceUrl={this.props.sourceUrl}
                          sortDefinitions={this.sortDefinitions}
                          jsonResultsKey={'activity_sessions'}

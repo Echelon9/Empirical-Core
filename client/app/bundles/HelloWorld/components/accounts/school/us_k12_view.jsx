@@ -64,7 +64,7 @@ export default React.createClass({
                                schoolOptions={this.state.schoolOptions}
                                requestSchools={this.requestSchools}
                                updateSchool={this.updateSchool}
-                               isForSignUp={true}/>
+                               isForSignUp/>
 
           {this.showButton()}
           <div className='row'>

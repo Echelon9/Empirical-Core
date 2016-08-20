@@ -36,7 +36,7 @@ export default React.createClass({
                           loading={this.props.loading}
                           currentSort={this.props.currentSort}
                           sortHandler={this.props.sortHandler}
-                          shouldTransition={true}
+                          shouldTransition
                           transitionName={'adminTeacher'}/>
       </div>
 
