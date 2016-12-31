@@ -35,6 +35,7 @@ module Teachers
     end
 
     def table
+      puts page.html
       find('table')
     end
 
