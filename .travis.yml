@@ -13,6 +13,7 @@ before_script:
   - cp config/database.yml.travis config/database.yml
   - bundle exec rake db:create
   - bundle exec rake db:migrate
+  - bundle exec rake db:seed
   - npm install  # Make use of 'postinstall' to run 'cd ./client npm install'
 addons:
   postgresql: "9.3"
